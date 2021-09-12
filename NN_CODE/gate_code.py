@@ -25,6 +25,13 @@ def OR_gate(x1, x2):
         return 0
     else:
         return 1
+def XOR_gate(x1,x2):
+    a1 = NAND_gate(x1,x2)
+    a2 = OR_gate(x1,x2)
+    result = AND_gate(a1,a2) 
+    return result
+
+print('XOR_gate: (0,0,{}) (0,1,{}) (1,0,{}) (1,1,{})'.format(XOR_gate(0,0),XOR_gate(0,1),XOR_gate(1,0),XOR_gate(1,1)))
 print('AND_gate: (0,0,{}) (0,1,{}) (1,0,{}) (1,1,{})'.format(AND_gate(0,0),AND_gate(0,1),AND_gate(1,0),AND_gate(1,1)))
 print('NAND_gate: (0,0,{}) (0,1,{}) (1,0,{}) (1,1,{})'.format(NAND_gate(0,0),NAND_gate(0,1),NAND_gate(1,0),NAND_gate(1,1)))
 print('OR_gate: (0,0,{}) (0,1,{}) (1,0,{}) (1,1,{})'.format(OR_gate(0,0),OR_gate(0,1),OR_gate(1,0),OR_gate(1,1)))
