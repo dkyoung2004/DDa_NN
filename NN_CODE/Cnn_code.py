@@ -8,9 +8,5 @@ mnist = tf.keras.datasets.mnist
 
 x_train, x_test = x_train/ 255.0, x_test/255.0
 
-model =  tf.keras.models.Sequential([
-
-
-
-    
+model =  tf.keras.models.Sequential([    
 ])
